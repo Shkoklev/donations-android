@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrganizationsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/organizations_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#853200"
+        android:elevation="4dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/button_show_all"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:background="#853200"
+                android:clickable="true"
+                android:onClick="showCategoriesPopup"
+                android:textColor="@color/white"
+                android:layout_alignParentLeft="true"
+                android:text="Одбери категорија" />
+
+            <Button
+                android:id="@+id/button_show_by_category"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:background="#853200"
+                android:clickable="true"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="Прикажи сите"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/organizations_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_margin="10dp"
+        android:indeterminate="false"
+        android:max="10"
+        app:layout_constraintTop_toBottomOf="@id/organizations_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/organizations_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/organizations_progress_bar">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

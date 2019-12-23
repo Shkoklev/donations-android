@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Донации</string>
+    <string name="action_search">Пребарај</string>
+    <string name="organizations">Организации</string>
+    <string name="phone">телефонски броj: %1$s</string>\
+    <string name="email">емаил: %1$s</string>
+</resources>
